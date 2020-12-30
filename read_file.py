@@ -1,11 +1,11 @@
 from pynput.keyboard import Key, Controller
 import keyboard
+import pyperclip
 import time
 import os
 from textwrap import wrap
 import sys
 from pathlib import Path
-import pyperclip
 
 pynput_keyboard = Controller()
 
