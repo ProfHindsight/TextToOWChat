@@ -59,9 +59,9 @@ def type_string(input_string):
     type_char(Key.enter)
     ctrl_v()
     type_char(Key.enter)
-    for key in keys:
-        time.sleep(KEY_TIME)
-        pynput_keyboard.press(key)
+    # for key in keys:
+    #     time.sleep(KEY_TIME)
+    #     pynput_keyboard.press(key)
 
 
 def read_file(input_filename):
@@ -95,7 +95,7 @@ def split_strings(input_string, n=195):
     out.append(string)
     return out
 
-SLEEP_BETWEEN_TEXT_TIME = 4
+SLEEP_BETWEEN_TEXT_TIME = 6
 
 def type_file(split_strings):
     '''
