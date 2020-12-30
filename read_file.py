@@ -44,6 +44,8 @@ def type_string(input_string):
     Presses enter,
     Presses original pressed keys
     '''
+    # List of keys to check since I can't find a way to 
+    # check all of the keys
     check_keys = 'asdwer '
     keys = []
     for key in check_keys:
@@ -114,8 +116,8 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Incorrect number of arguments, please pass a filename")
         quit()
-    # time.sleep(5)
+    time.sleep(5)
     print(f'Reading file: {sys.argv[1]}')
     file_contents = read_file(sys.argv[1])
     strings = split_strings(file_contents)
-    # type_file(strings)
+    type_file(strings)
