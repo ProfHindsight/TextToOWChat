@@ -6,7 +6,7 @@ from textwrap import wrap
 import sys
 from pathlib import Path
 
-
+KEY_DELAY = .0001
 def type_string(input_string):
     '''
     Checks which keys are currently pressed,
@@ -19,9 +19,13 @@ def type_string(input_string):
     '''
     pyperclip.copy(input_string)
     scan_codes = keyboard.stash_state()
+    time.sleep(KEY_DELAY)
     keyboard.send('enter', do_press=True, do_release=True)
+    time.sleep(KEY_DELAY)
     keyboard.send('ctrl+v', do_press=True, do_release=True)
+    time.sleep(KEY_DELAY)
     keyboard.send('enter', do_press=True, do_release=True)
+    time.sleep(KEY_DELAY)
     keyboard.restore_state(scan_codes)
 
 
